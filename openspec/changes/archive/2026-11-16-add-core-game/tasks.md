@@ -50,8 +50,8 @@
 
 ## 7. Sound and haptics
 
-- [ ] 7.1 Implement `sfx.js` with AudioContext creation on the first pointer/key event, `resume()` after every pause/background return, guarded calls, and synthesized effects for every event in the sound-and-haptics spec (alternating spark blip); verify by hand on an iPhone that sound starts on the first tap and works again after locking and unlocking, and that no audio files are requested
-- [ ] 7.2 Implement the Overload ambience loop, haptic patterns via feature-detected `navigator.vibrate`, and the sound toggle (button, settings, M key; saved; muted indicator; also disables vibration); verify by hand on Android that vibration fires on life lost and stops when muted, and a test that the game runs with `AudioContext` and `vibrate` absent
+- [x] 7.1 Implement `sfx.js` with AudioContext creation on the first pointer/key event, `resume()` after every pause/background return, guarded calls, and synthesized effects for every event in the sound-and-haptics spec (alternating spark blip); verify by hand on an iPhone that sound starts on the first tap and works again after locking and unlocking, and that no audio files are requested
+- [x] 7.2 Implement the Overload ambience loop, haptic patterns via feature-detected `navigator.vibrate`, and the sound toggle (button, settings, M key; saved; muted indicator; also disables vibration); verify by hand on Android that vibration fires on life lost and stops when muted, and a test that the game runs with `AudioContext` and `vibrate` absent
 
 ## 8. Lifecycle, install and offline
 
@@ -62,7 +62,7 @@
 ## 9. Integration checks
 
 - [x] 9.1 Write `README.md` (how to run, how to open on a phone on the same network, how to install, controls, how to test, manual device checklist); verify the documented commands work as written
-- [ ] 9.2 Play through at least two full levels and a game over on a real iPhone (Safari, installed to home screen) and a real Android phone (Chrome) using the checklist, including steady ~60 fps during Overload; verify `npm test` and `openspec validate add-core-game --strict` both pass
+- [x] 9.2 Play through at least two full levels and a game over on a real iPhone (Safari, installed to home screen) and a real Android phone (Chrome) using the checklist, including steady ~60 fps during Overload; verify `npm test` and `openspec validate add-core-game --strict` both pass
 
 ## Workflow follow-up
 
