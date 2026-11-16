@@ -1,0 +1,14 @@
+{
+  "name": "neon-nibbler",
+  "version": "0.1.0",
+  "private": true,
+  "description": "An original, mobile-first arcade maze-chase game for the browser.",
+  "type": "module",
+  "scripts": {
+    "start": "node tools/serve.mjs",
+    "test": "node --test \"test/**/*.test.js\"",
+    "e2e": "node --test --test-concurrency=1 \"e2e/**/*.test.js\"",
+    "icons": "node tools/make-icons.mjs"
+  },
+  "engines": { "node": ">=21" }
+}

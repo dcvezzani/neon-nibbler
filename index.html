@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Neon Nibbler: an original neon maze-chase arcade game. Swipe to steer Nib, collect sparks and outwit four rogue Glitches.">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Neon Nibbler">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="src/style.css">
+  <title>Neon Nibbler</title>
+</head>
+<body>
+  <div id="safe-probe" aria-hidden="true"></div>
+  <main id="stage">
+    <canvas id="game" role="img" aria-label="Neon Nibbler playfield"></canvas>
+
+    <div id="top-buttons" class="button-bar">
+      <button id="btn-pause" class="icon-btn" type="button" aria-label="Pause" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+      </button>
+      <button id="btn-sound" class="icon-btn" type="button" aria-label="Sound on" aria-pressed="false">
+        <svg class="on" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/><path class="stroke" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12"/></svg>
+        <svg class="off" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/><path class="stroke" d="M16 9l6 6M22 9l-6 6"/></svg>
+      </button>
+      <button id="btn-settings" class="icon-btn" type="button" aria-label="Settings">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path class="stroke" d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle class="stroke" cx="16" cy="7" r="2"/><circle class="stroke" cx="8" cy="17" r="2"/></svg>
+      </button>
+    </div>
+
+    <div id="dpad" hidden>
+      <button type="button" class="dpad-btn" data-dir="0" aria-label="Up"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6l7 9H5z"/></svg></button>
+      <button type="button" class="dpad-btn" data-dir="1" aria-label="Left"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 12l9-7v14z"/></svg></button>
+      <button type="button" class="dpad-btn" data-dir="3" aria-label="Right"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 12l-9 7V5z"/></svg></button>
+      <button type="button" class="dpad-btn" data-dir="2" aria-label="Down"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 18l-7-9h14z"/></svg></button>
+    </div>
+
+    <div id="pause-panel" class="panel" role="dialog" aria-modal="true" aria-labelledby="pause-title" hidden>
+      <h2 id="pause-title">Paused</h2>
+      <button id="btn-resume" class="big-btn primary" type="button">Resume</button>
+      <button id="btn-quit" class="big-btn" type="button">Quit</button>
+    </div>
+
+    <div id="settings-panel" class="panel" role="dialog" aria-modal="true" aria-labelledby="settings-title" hidden>
+      <h2 id="settings-title">Settings</h2>
+      <div class="setting">
+        <span id="lbl-sound">Sound &amp; vibration</span>
+        <button id="tgl-sound" class="switch" type="button" role="switch" aria-checked="true" aria-labelledby="lbl-sound"><span class="state"></span></button>
+      </div>
+      <div class="setting">
+        <span id="lbl-dpad">On-screen D-pad</span>
+        <button id="tgl-dpad" class="switch" type="button" role="switch" aria-checked="false" aria-labelledby="lbl-dpad"><span class="state"></span></button>
+      </div>
+      <button id="btn-settings-close" class="big-btn primary" type="button">Done</button>
+    </div>
+  </main>
+  <noscript><p class="noscript">Neon Nibbler needs JavaScript to run.</p></noscript>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>

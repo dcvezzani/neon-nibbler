@@ -1,0 +1,46 @@
+schema: spec-driven
+
+context: |
+  Neon Nibbler is an ORIGINAL arcade maze-chase game in the genre of classic
+  dot-eating maze games. It must not reuse any existing game's name, characters,
+  character names, sprites, maze layouts, sounds or music. Genre mechanics
+  (grid maze, pellets, power-ups, enemy behaviour modes) are fine; the
+  presentation (player shape, enemy designs/names, maze layout, palette) is ours.
+  MOBILE FIRST: design for phone touchscreens (iOS Safari, Android Chrome) in
+  portrait first; desktop keyboard play is a secondary target that must still work.
+  Stack: HTML5 Canvas + vanilla JavaScript (ES modules), no build step and no
+  runtime dependencies; must run from any static server (HTTPS for install).
+  Audio is synthesized with the Web Audio API (no audio asset files).
+  Game logic (maze, movement, enemy AI, scoring, timers) must be deterministic
+  and testable headlessly in Node without a DOM.
+
+# Project context (optional)
+# Add only constraints that should guide OpenSpec artifacts and workflows.
+# Include constraints an agent cannot infer by reading the code.
+# Keep general project documentation and discoverable codebase facts out.
+# Example:
+#   context: |
+#     Designs and tasks must cover Windows, macOS, and Linux
+#     Write all artifacts in Spanish
+
+# Per-artifact rules (optional)
+# Add custom rules for specific artifacts.
+# Example:
+#   rules:
+#     proposal:
+#       - Keep proposals under 500 words
+#       - Always state what is out of scope
+#     tasks:
+#       - Break tasks into chunks of max 2 hours
+
+# Per-operation guidance (optional)
+# Add advisory guidance for how apply and archive work should be conducted.
+# This is separate from artifact rules above.
+# Example:
+#   operations:
+#     apply:
+#       guidance:
+#         - Keep test summaries concise
+#     archive:
+#       guidance:
+#         - Summarize the archive outcome before finishing
